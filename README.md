@@ -40,6 +40,16 @@ Group=rigctld
 [Install]
 WantedBy=multi-user.target
 ```
+
+## create a user to run as a service
+$ sudo adduser <insert-user-here> --system --group --home /var/lib/rigctld
+$ sudo adduser <insert-user-here> dialout
+$ sudo usermod <insert-user-here> --expiredate 1
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable rigctld.service
+$ sudo systemctl start rigctld.service
+
+
 ## Links of Note
 https://github.com/la5nta/pat/wiki
 https://themodernham.com/setup-pat-winlink-on-raspberry-pi-with-rigcontrol/
