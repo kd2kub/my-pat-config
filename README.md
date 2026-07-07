@@ -17,6 +17,13 @@ use https://crontab.guru/ to make life slightly easier.  I configured my PAT to 
 
 I use this right now (07/06/2026) 30 * * * * 7100.9 varahf:4350
 
+## Setting up a service for each radio.
+I setup a service following https://www.thuben.com/amateur/software/rigctl
+
+Only difference is that I named my services rigctld-<radiomodel>.service.
+
+991A = rigctld-991A.service
+
 ## Links of Note
 https://github.com/la5nta/pat/wiki
 https://themodernham.com/setup-pat-winlink-on-raspberry-pi-with-rigcontrol/
