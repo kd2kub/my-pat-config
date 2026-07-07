@@ -12,3 +12,13 @@ for an FT991A here are my lessons learned.
 
 <img width="902" height="605" alt="Screenshot at 2026-07-06 20-40-02" src="https://github.com/user-attachments/assets/55db9682-755d-4360-a716-ce47d17294c4" />
 
+## Setting up CRON (well kinda)
+use https://crontab.guru/ to make life slightly easier.  I configured my PAT to poll every 30 minutes because band conditions suck. 
+
+I use this right now (07/06/2026) 30 * * * * 7100.9 varahf:4350
+
+## Links of Note
+https://github.com/la5nta/pat/wiki
+https://themodernham.com/setup-pat-winlink-on-raspberry-pi-with-rigcontrol/
+https://github.com/la5nta/pat/issues/184
+https://www.thuben.com/amateur/software/rigctl
