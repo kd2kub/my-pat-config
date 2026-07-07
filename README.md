@@ -13,17 +13,33 @@ for an FT991A here are my lessons learned.
 <img width="902" height="605" alt="Screenshot at 2026-07-06 20-40-02" src="https://github.com/user-attachments/assets/55db9682-755d-4360-a716-ce47d17294c4" />
 
 ## Setting up CRON (well kinda)
-use https://crontab.guru/ to make life slightly easier.  I configured my PAT to poll every 30 minutes because band conditions suck. 
+use https://crontab.guru/ to make life slightly easier.  I configured my PAT to poll every 30 minutes because band conditions suck.
 
 I use this right now (07/06/2026) 30 * * * * 7100.9 varahf:4350
+
+(Update - disabled for now, no sense in creating more noise filth)
 
 ## Setting up a service for each radio.
 I setup a service following https://www.thuben.com/amateur/software/rigctl
 
 Only difference is that I named my services rigctld-<radiomodel>.service.
 
-991A = rigctld-991A.service
-
+### 991A = rigctld-991A.service
+```
+[Unit]
+Description=rigctld Hamradio rig controller for FT-991A
+After=syslog.target network.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/rigctld -m 1035 -r /dev/ttyUSB0 -t 4532 -s 38400
+ExecReload=/bin/kill -HUP $MAINPID
+RestartSec=60
+Restart=always
+User=rigctld
+Group=rigctld
+[Install]
+WantedBy=multi-user.target
+```
 ## Links of Note
 https://github.com/la5nta/pat/wiki
 https://themodernham.com/setup-pat-winlink-on-raspberry-pi-with-rigcontrol/
