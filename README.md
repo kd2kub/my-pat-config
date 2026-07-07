@@ -1,16 +1,16 @@
 # my-pat-config
 My own pat configuration for radios I helped others configure. This may help anyone else who needs a little technical assistance. 
 
-## Setting up a service for each radio.
-I setup a service following https://www.thuben.com/amateur/software/rigctl
-
-Only difference is that I named my services rigctld-<radiomodel>.service.
-
 ## PAT - Installation notes
 Pretty self explainatory, just follow their instructions for linux
 https://github.com/la5nta/pat
 
 No gotchas that I had from installation. 
+
+## Setting up a service for each radio.
+I setup a service following https://www.thuben.com/amateur/software/rigctl
+
+Only difference is that I named my services rigctld-\[radiomodel\].service.
 
 ### 991A = rigctld-991A.service
 ```
@@ -28,8 +28,40 @@ Group=rigctld
 [Install]
 WantedBy=multi-user.target
 ```
+### 818ND = rigctld-818nd.service
+```
+[Unit]
+Description=rigctld Hamradio rig controller for FT-991A
+After=syslog.target network.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/rigctld -m 1041 -r /dev/ttyUSB0 -t 4534 -s 38400
+ExecReload=/bin/kill -HUP $MAINPID
+RestartSec=60
+Restart=always
+User=rigctld
+Group=rigctld
+[Install]
+WantedBy=multi-user.target
+```
+### 891 = rigctld-891.service
+```
+[Unit]
+Description=rigctld Hamradio rig controller for FT-991A
+After=syslog.target network.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/rigctld -m 1036 -r /dev/ttyUSB0 -t 4533 -s 38400
+ExecReload=/bin/kill -HUP $MAINPID
+RestartSec=60
+Restart=always
+User=rigctld
+Group=rigctld
+[Install]
+WantedBy=multi-user.target
+```
 
-## Create a user to run as a service
+## Create a user to run as a service \(only needs to be done once\)
 ```
 $ sudo adduser <insert-user-here> --system --group --home /var/lib/rigctld
 $ sudo adduser <insert-user-here> dialout
@@ -38,6 +70,8 @@ $ sudo systemctl daemon-reload
 $ sudo systemctl enable rigctld.service
 $ sudo systemctl start rigctld.service
 ```
+
+** NOTE: Make sure to identify some place for easy reference port numbers and radios, they need to be switched manually in PAT configuration. **
 
 ## Connection Aliases
 
