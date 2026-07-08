@@ -31,7 +31,7 @@ WantedBy=multi-user.target
 ### 818ND = rigctld-818nd.service
 ```
 [Unit]
-Description=rigctld Hamradio rig controller for FT-991A
+Description=rigctld Hamradio rig controller for FT-818
 After=syslog.target network.target
 [Service]
 Type=simple
@@ -47,7 +47,7 @@ WantedBy=multi-user.target
 ### 891 = rigctld-891.service
 ```
 [Unit]
-Description=rigctld Hamradio rig controller for FT-991A
+Description=rigctld Hamradio rig controller for FT-891
 After=syslog.target network.target
 [Service]
 Type=simple
