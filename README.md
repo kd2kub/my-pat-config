@@ -35,7 +35,7 @@ Description=rigctld Hamradio rig controller for FT-991A
 After=syslog.target network.target
 [Service]
 Type=simple
-ExecStart=/usr/bin/rigctld -m 1041 -r /dev/ttyUSB0 -t 4534 -s 38400
+ExecStart=/usr/bin/rigctld -m 1041 -r /dev/ttyUSB0 -t 4534 -s 38400 -P RTS
 ExecReload=/bin/kill -HUP $MAINPID
 RestartSec=60
 Restart=always
