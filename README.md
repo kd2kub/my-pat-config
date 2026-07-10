@@ -80,7 +80,7 @@ $ sudo systemctl start rigctld.service
 ## Setting up CRON (well kinda)
 use https://crontab.guru/ to make life slightly easier.  I configured my PAT to poll every 30 minutes because band conditions suck.
 
-I use this right now (07/10/2026) 0/30 * * * * 7100.9 varahf:4350
+I use this right now (07/10/2026) 0/10 * * * * connect w2qs-7100.9-varahf
 
 (Update - disabled for now, no sense in creating more noise filth)
 
