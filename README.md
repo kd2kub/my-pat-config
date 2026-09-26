@@ -75,7 +75,8 @@ $ sudo systemctl start rigctld.service
 
 ## Connection Aliases
 
-<img width="902" height="605" alt="Screenshot at 2026-07-06 20-40-02" src="https://github.com/user-attachments/assets/55db9682-755d-4360-a716-ce47d17294c4" />
+<img width="916" height="825" alt="image" src="https://github.com/user-attachments/assets/a1df57c9-2f67-4b13-9bf3-57e2a3c04a5e" />
+
 
 ## Setting up CRON (well kinda)
 use https://crontab.guru/ to make life slightly easier.  I configured my PAT to poll every 30 minutes because band conditions suck.
