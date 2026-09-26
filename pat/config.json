@@ -1,0 +1,104 @@
+{
+  "mycall": "KD2KUB",
+  "secure_login_password": "",
+  "auxiliary_addresses": [],
+  "locator": "FN13UB",
+  "auto_download_size_limit": -1,
+  "service_codes": [
+    "PUBLIC"
+  ],
+  "http_addr": "localhost:8080",
+  "motd": [
+    "Open source Winlink client - getpat.io"
+  ],
+  "connect_aliases": {
+    "145030-ax25-kd2tju-10": "ax25:///kd2tju-10?freq=145030.00",
+    "145070-ax25agwpe-w2qs-10": "ax25:///w2qs-10?freq=145070.00",
+    "ky2d-3589.6-varahf": "varahf:///KY2D?bw=2300\u0026freq=3589.6",
+    "ky2d-3591.6-varahf": "varahf:///KY2D?bw=2300\u0026freq=3591.6",
+    "ky2d-7100.9-varahf": "varahf:///KY2D?bw=2300\u0026freq=7100.9",
+    "telnet": "telnet://{mycall}:CMSTelnet@cms.winlink.org:8772/wl2k",
+    "w2qs-14096.4-varahf": "varahf:///W2QS?bw=2300\u0026freq=14096.4",
+    "w2qs-18106.9-varahf": "varahf:///W2QS?bw=2300\u0026freq=18106.9",
+    "w2qs-3590.4-varahf": "varahf:///w2qs?bw=2300\u0026freq=3590.4",
+    "w2qs-3592.4-varahf": "varahf:///w2qs?bw=2300\u0026freq=3592.4",
+    "w2qs-7100.9-varahf": "varahf:///W2QS?bw=2300\u0026freq=7100.9"
+  },
+  "listen": [
+    "varahf",
+    "ax25"
+  ],
+  "hamlib_rigs": {
+    "FT-991A": {
+      "network": "tcp",
+      "address": "localhost:4532",
+      "VFO": ""
+    }
+  },
+  "ax25": {
+    "engine": "agwpe",
+    "rig": "FT-991A",
+    "beacon": {
+      "every": 3600,
+      "message": "kd2kub-1 packet",
+      "destination": "IDENT"
+    }
+  },
+  "ax25_linux": {
+    "port": "wl2k"
+  },
+  "agwpe": {
+    "addr": "localhost:8000",
+    "radio_port": 0
+  },
+  "serial-tnc": {
+    "path": "/dev/ttyUSB0",
+    "serial_baud": 1200,
+    "hbaud": 1200,
+    "type": "kenwood"
+  },
+  "ardop": {
+    "addr": "localhost:8515",
+    "arq_bandwidth": {
+      "Forced": false,
+      "Max": 500
+    },
+    "connect_requests": 10,
+    "rig": "FT-991A",
+    "ptt_ctrl": false,
+    "beacon_interval": 0,
+    "cwid_enabled": true
+  },
+  "pactor": {
+    "path": "/dev/ttyUSB0",
+    "baudrate": 57600,
+    "rig": "",
+    "custom_init_script": ""
+  },
+  "telnet": {
+    "listen_addr": ":8774",
+    "password": ""
+  },
+  "varahf": {
+    "addr": "localhost:8300",
+    "bandwidth": 2300,
+    "rig": "FT-991A",
+    "ptt_ctrl": true
+  },
+  "varafm": {
+    "addr": "localhost:8300",
+    "rig": "",
+    "ptt_ctrl": false
+  },
+  "gpsd": {
+    "enable_http": false,
+    "allow_forms": false,
+    "use_server_time": true,
+    "update_locator": false,
+    "addr": "localhost:2947"
+  },
+  "schedule": {
+    "0/30 * * * *": "connect w2qs-3590.4-varahf"
+  },
+  "version_reporting_disabled": false
+}
