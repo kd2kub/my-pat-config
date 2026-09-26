@@ -98,4 +98,6 @@ for an FT991A here are my lessons learned.
 2. For Vara HF, ensure to check box "PTT Control," in configuration menu.
 3. For Vara HF, also check box "Listen for inbound p2p Traffic."
 4. cron does work but can be problematic trying to override while in play.  Need to shut cron off setup in PAT in order to make alternate connections.
-5. There is no way to issue a rigctl M PKTUSB 3000 or rigctl M PKTLSB 3000 effectively when service connects to radio. Problematic for digital. Seems like there is a fix in place: https://github.com/la5nta/pat/issues/528 
+5. There is no way to issue a rigctl M PKTUSB 3000 or rigctl M PKTLSB 3000 effectively when service connects to radio. Problematic for digital. Seems like there is a fix in place: https://github.com/la5nta/pat/issues/528
+6. For my linux tablet, need to check ls /dev/tty* to ensure that radio port is correct. If there are connection issues. Turn radio off and disconnect cable, cycling ls /dev/tty* each time to catch a potentially new port.
+7. If I want to cycle from a connect to a node to frequency monitor, I need to do follow these commands and do this. https://pkg.go.dev/github.com/la5nta/pat/cfg?utm_source=godoc#Config
