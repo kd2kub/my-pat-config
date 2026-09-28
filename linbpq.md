@@ -31,6 +31,14 @@ mkdir ~/linbpq
 mv linbpq ~/linbpq
 ```
 
+You will also need John's HTML files.  download them in linbpq folder under a folder "HTML"
+```
+mkdir HTML
+cd HTML
+wget http://www.cantab.net/users/john.wiseman/Downloads/Beta/HTMLPages.zip
+unzip HTMLPages.zip
+```
+
 Now after that is completed, create and insert a bpq32.cfg file. This will not exist in that folder. 
 ```
 touch bpq32.cfg
@@ -395,3 +403,13 @@ BBSUsers :
 };
 
 ```
+Now, with vara, install that to run it as wine and then use this script to set up a service to start up vara and linbpq
+```
+#!/bin/bash
+
+/opt/cxoffice/bin/wine --bottle Winlink --cx-app VARA.exe &
+sleep 10
+./linbpq
+
+```
+
