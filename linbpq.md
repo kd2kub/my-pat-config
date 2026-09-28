@@ -36,7 +36,12 @@ Now after that is completed, create and insert a bpq32.cfg file. This will not e
 touch bpq32.cfg
 ```
 
-Here is my configuration file that I am using up to this point. 
+Here is my configuration file that I am using up to this point. This took a culmination of certain pages to build out.  These are noted below for reference. 
+
+REFERENCES: 
+- https://www.cantab.net/users/john.wiseman/Documents/MailServer.html
+- https://www.cantab.net/users/john.wiseman/Downloads/installWebMail
+- 
 
 ```
 ;
@@ -257,4 +262,136 @@ PORT
 ENDPORT
 
 LINMAIL
+```
+In this mix as well is another configuration called linmail.cfg
+
+```
+main : 
+{
+  Streams = 10;
+  BBSApplNum = 1;
+  BBSName = "KD2KUB";
+  SYSOPCall = "KD2KUB";
+  H-Route = "";
+  AMPRDomain = "";
+  EnableUI = 0;
+  RefuseBulls = 0;
+  OnlyKnown = 0;
+  reportMailEvents = 0;
+  SendSYStoSYSOPCall = 0;
+  SendBBStoSYSOPCall = 0;
+  DontHoldNewUsers = 0;
+  DefaultNoWINLINK = 0;
+  AllowAnon = 0;
+  DontNeedHomeBBS = 0;
+  DontCheckFromCall = 0;
+  UserCantKillT = 0;
+  ForwardToMe = 0;
+  SMTPPort = 0;
+  POP3Port = 0;
+  NNTPPort = 0;
+  RemoteEmail = 0;
+  SendAMPRDirect = 0;
+  MailForInterval = 0;
+  MailForText = "";
+  AuthenticateSMTP = 0;
+  MulticastRX = 0;
+  SMTPGatewayEnabled = 0;
+  ISPSMTPPort = 0;
+  ISPPOP3Port = 0;
+  POP3PollingInterval = 0;
+  MyDomain = "";
+  ISPSMTPName = "";
+  ISPEHLOName = "";
+  ISPPOP3Name = "";
+  ISPAccountName = "";
+  ISPAccountPass = "D149210DFCBBD14F031E433E552D6AE6";
+  Log_BBS = 1;
+  Log_TCP = 1;
+  Version = "6,0,25,41";
+  WelcomeMsg = "Hello $I. Latest Message is $L, Last listed is $Z\r\n";
+  NewUserWelcomeMsg = "Hello $I. Latest Message is $L, Last listed is $Z\r\n";
+  ExpertWelcomeMsg = "";
+  Prompt = "de KD2KUB>\r\n";
+  NewUserPrompt = "de KD2KUB>\r\n";
+  ExpertPrompt = "de KD2KUB>\r\n";
+  SignoffMsg = "";
+  RejFrom = "";
+  RejTo = "";
+  RejAt = "";
+  RejBID = "";
+  HoldFrom = "";
+  HoldTo = "";
+  HoldAt = "";
+  HoldBID = "";
+  FBBFilters = "";
+  SendWP = 0;
+  SendWPType = 0;
+  FilterWPBulls = 0;
+  NoWPGuesses = 0;
+  SendWPTO = "";
+  SendWPVIA = "";
+  SendWPAddrs = "";
+  MaxTXSize = 99999;
+  MaxRXSize = 99999;
+  ReaddressLocal = 0;
+  ReaddressReceived = 0;
+  WarnNoRoute = 1;
+  Localtime = 0;
+  SendPtoMultiple = 0;
+  FOURCHARCONT = 0;
+  FWDAliases = "";
+};
+BBSForwarding : 
+{
+};
+Housekeeping : 
+{
+  LastHouseKeepingTime = 0L;
+  LastTrafficTime = 0L;
+  MaxMsgno = 60000;
+  BidLifetime = 60;
+  MaxAge = 30;
+  LogLifetime = 7;
+  MaintInterval = 24;
+  UserLifetime = 0;
+  MaintTime = 0;
+  PR = 0.0;
+  PUR = 0.0;
+  PF = 0.0;
+  PNF = 0.0;
+  BF = 30;
+  BNF = 30;
+  NTSD = 30;
+  NTSF = 30;
+  NTSU = 30;
+  DeletetoRecycleBin = 0;
+  SuppressMaintEmail = 0;
+  MaintSaveReg = 0;
+  OverrideUnsent = 0;
+  SendNonDeliveryMsgs = 1;
+  GenerateTrafficReport = 1;
+  LTFROM = "";
+  LTTO = "";
+  LTAT = "";
+};
+UIPort1 : 
+{
+  Enabled = 0;
+  SendMF = 0;
+  SendHDDR = 0;
+  SendNull = 0;
+};
+UIPort2 : 
+{
+  Enabled = 0;
+  SendMF = 0;
+  SendHDDR = 0;
+  SendNull = 0;
+};
+BBSUsers : 
+{
+  KD2KUB = "^^^^^^^0^16^0^1^0^0^0^,,,,,,,,,,,,,,,,,,,,,,,,,^,,,,,,,,,,,,,,,,,,,,,,,,,";
+};
+
 ```
