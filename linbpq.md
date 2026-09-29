@@ -330,4 +330,8 @@ sleep 10
 ./linbpq
 
 ```
+Next, go to my main landing page and grab/create a rigctld service to support rig control.
+https://github.com/kd2kub/my-pat-config/tree/main
+
+From there, that should get you started.  I will be updating more as I build out my system. 
 
