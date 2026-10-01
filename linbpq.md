@@ -44,6 +44,17 @@ Now after that is completed, create and insert a bpq32.cfg file. This will not e
 touch bpq32.cfg
 ```
 
+Next, create a user to support running bpq as a service. 
+
+```
+$ sudo adduser <insert-user-here> --system --group --home /var/lib/linbpq
+$ sudo adduser <insert-user-here> dialout
+$ sudo usermod <insert-user-here> --expiredate 1
+$ sudo systemctl daemon-reload
+$ sudo systemctl enable bpq.service
+$ sudo systemctl start bpq.service
+```
+
 Here is my configuration file that I am using up to this point. This took a culmination of certain pages to build out.  These are noted below for reference. 
 
 REFERENCES: 
