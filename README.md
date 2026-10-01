@@ -60,6 +60,23 @@ Group=rigctld
 [Install]
 WantedBy=multi-user.target
 ```
+### 7600 = rigctld-7600.service
+```
+[Unit]
+Description=rigctld Hamradio rig controller for IC-7600
+After=syslog.target network.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/rigctld -m 3063 -r /dev/ttyUSB0 -t 4535 -s 38400
+ExecReload=/bin/kill -HUP $MAINPID
+RestartSec=60
+Restart=always
+User=rigctld
+Group=rigctld
+[Install]
+WantedBy=multi-user.target
+```
+
 
 ## Create a user to run as a service \(only needs to be done once\)
 ```
