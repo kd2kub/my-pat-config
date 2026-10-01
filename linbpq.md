@@ -311,7 +311,7 @@ main :{
   SendSYStoSYSOPCall = 0;
   SendBBStoSYSOPCall = 0;
   DontHoldNewUsers = 0;
-  DefaultNoWINLINK = 0;
+  DefaultNoWINLINK = 1;
   AllowAnon = 1;
   DontNeedHomeBBS = 1;
   DontCheckFromCall = 0;
