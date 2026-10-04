@@ -188,156 +188,182 @@ LINMAIL
 In this mix as well is another configuration called linmail.cfg
 
 ```
-main :{
-  Streams = 10;
-  BBSApplNum = 2;
-  BBSName = "KD2KUB";
-  SYSOPCall = "KD2KUB";
-  H-Route = "";
-  AMPRDomain = "";
-  EnableUI = 0;
-  RefuseBulls = 0;
-  OnlyKnown = 0;
-  reportMailEvents = 0;
-  SendSYStoSYSOPCall = 0;
-  SendBBStoSYSOPCall = 0;
-  DontHoldNewUsers = 0;
-  DefaultNoWINLINK = 1;
-  AllowAnon = 1;
-  DontNeedHomeBBS = 1;
-  DontCheckFromCall = 0;
-  UserCantKillT = 0;
-  ForwardToMe = 0;
-  SMTPPort = 0;
-  POP3Port = 0;
-  NNTPPort = 0;
-  RemoteEmail = 0;
-  SendAMPRDirect = 0;
-  MailForInterval = 0;
-  MailForText = "";
-  AuthenticateSMTP = 0;
-  MulticastRX = 0;
-  SMTPGatewayEnabled = 0;
-  ISPSMTPPort = 0;
-  ISPPOP3Port = 0;
-  POP3PollingInterval = 0;
-  MyDomain = "";
-  ISPSMTPName = "";
-  ISPEHLOName = "";
-  ISPPOP3Name = "";
-  ISPAccountName = "";
-  ISPAccountPass = "D149210DFCBBD14F031E433E552D6AE6";
-  Log_BBS = 1;
-  Log_TCP = 1;
-  Version = "6,0,25,41";
-  WelcomeMsg = "Hello $I. Latest Message is $L, Last listed is $Z\r\n";
-  NewUserWelcomeMsg = "Hello $I. Latest Message is $L, Last listed is $Z\r\n";
-  ExpertWelcomeMsg = "\r\n";
-  Prompt = "de KD2KUB>\r\n";
-  NewUserPrompt = "de KD2KUB>\r\n";
-  ExpertPrompt = "de KD2KUB>\r\n";
-  SignoffMsg = "";
-  RejFrom = "";
-  RejTo = "";
-  RejAt = "";
-  RejBID = "";
-  HoldFrom = "";
-  HoldTo = "";
-  HoldAt = "";
-  HoldBID = "";
-  FBBFilters = "";
-  SendWP = 0;
-  SendWPType = 0;
-  FilterWPBulls = 0;
-  NoWPGuesses = 0;
-  SendWPTO = "";
-  SendWPVIA = "";
-  SendWPAddrs = "";
-  MaxTXSize = 99999;
-  MaxRXSize = 99999;
-  ReaddressLocal = 0;
-  ReaddressReceived = 0;
-  WarnNoRoute = 1;
-  Localtime = 0;
-  SendPtoMultiple = 0;
-  FOURCHARCONT = 0;
-  FWDAliases = "ONO-EC|ONO-FAIR";
-};
-BBSForwarding :
+main : 
 {
-  K2VTT :
-  {
-    TOCalls = "";
-    ConnectScript = "";
-    ATCalls = "";
-    HRoutes = "";
-    HRoutesP = "";
-    FWDTimes = "";
-    Enabled = 0;
-    RequestReverse = 0;
-    AllowBlocked = 1;
-    AllowCompressed = 1;
-    UseB1Protocol = 0;
-    UseB2Protocol = 1;
-    SendCTRLZ = 0;
-    FWDPersonalsOnly = 0;
-    FWDNewImmediately = 0;
-    FwdInterval = 3600;
-    RevFWDInterval = 0;
-    MaxFBBBlock = 10000;
-    ConTimeout = 120;
-    BBSHA = "";
-  };
+  Streams = 10;
+  BBSApplNum = 2;
+  BBSName = "KD2KUB";
+  SYSOPCall = "KD2KUB";
+  H-Route = "";
+  AMPRDomain = "";
+  EnableUI = 0;
+  RefuseBulls = 0;
+  OnlyKnown = 0;
+  reportMailEvents = 0;
+  SendSYStoSYSOPCall = 0;
+  SendBBStoSYSOPCall = 0;
+  DontHoldNewUsers = 0;
+  DefaultNoWINLINK = 0;
+  AllowAnon = 1;
+  DontNeedHomeBBS = 1;
+  DontCheckFromCall = 0;
+  UserCantKillT = 0;
+  ForwardToMe = 0;
+  SMTPPort = 0;
+  POP3Port = 0;
+  NNTPPort = 0;
+  RemoteEmail = 0;
+  SendAMPRDirect = 0;
+  MailForInterval = 0;
+  MailForText = "";
+  AuthenticateSMTP = 0;
+  MulticastRX = 0;
+  SMTPGatewayEnabled = 0;
+  ISPSMTPPort = 0;
+  ISPPOP3Port = 0;
+  POP3PollingInterval = 0;
+  MyDomain = "";
+  ISPSMTPName = "";
+  ISPEHLOName = "";
+  ISPPOP3Name = "";
+  ISPAccountName = "";
+  ISPAccountPass = "D149210DFCBBD14F031E433E552D6AE6";
+  Log_BBS = 1;
+  Log_TCP = 1;
+  Version = "6,0,25,41";
+  WelcomeMsg = "$U, ur latest message is $L, last listed is $Z\r\n";
+  NewUserWelcomeMsg = "$U, ur latest message is $L, last listed is $Z\r\n";
+  ExpertWelcomeMsg = "\r\n";
+  Prompt = "de KD2KUB>\r\n";
+  NewUserPrompt = "de KD2KUB>\r\n";
+  ExpertPrompt = "de KD2KUB>\r\n";
+  SignoffMsg = "";
+  RejFrom = "";
+  RejTo = "";
+  RejAt = "";
+  RejBID = "";
+  HoldFrom = "";
+  HoldTo = "";
+  HoldAt = "";
+  HoldBID = "";
+  FBBFilters = "";
+  SendWP = 0;
+  SendWPType = 0;
+  FilterWPBulls = 0;
+  NoWPGuesses = 0;
+  SendWPTO = "";
+  SendWPVIA = "";
+  SendWPAddrs = "";
+  MaxTXSize = 99999;
+  MaxRXSize = 99999;
+  ReaddressLocal = 0;
+  ReaddressReceived = 0;
+  WarnNoRoute = 1;
+  Localtime = 0;
+  SendPtoMultiple = 0;
+  FOURCHARCONT = 0;
+  FWDAliases = "";
 };
-Housekeeping :
+BBSForwarding : 
 {
-  LastHouseKeepingTime = 0L;
-  LastTrafficTime = 0L;
-  MaxMsgno = 60000;
-  BidLifetime = 60;
-  MaxAge = 30;
-  LogLifetime = 7;
-  MaintInterval = 24;
-  UserLifetime = 0;
-  MaintTime = 0;
-  PR = 0.0;
-  PUR = 0.0;
-  PF = 0.0;
-  PNF = 0.0;
-  BF = 30;
-  BNF = 30;
-  NTSD = 30;
-  NTSF = 30;
-  NTSU = 30;
-  DeletetoRecycleBin = 0;
-  SuppressMaintEmail = 0;
-  MaintSaveReg = 0;
-  OverrideUnsent = 0;
-  SendNonDeliveryMsgs = 1;
-  GenerateTrafficReport = 1;
-  LTFROM = "";
-  LTTO = "";
-  LTAT = "";
+  RMS : 
+  {
+    TOCalls = "";
+    ConnectScript = "RMS|NOFALLBACK|ATTACH 1|NOFALLBACK|C CMS|ELSE|ATTACH 2|RADIO 7.093500|C VA3PDG";
+    ATCalls = "";
+    HRoutes = "";
+    HRoutesP = "";
+    FWDTimes = "";
+    Enabled = 1;
+    RequestReverse = 0;
+    AllowBlocked = 1;
+    AllowCompressed = 1;
+    UseB1Protocol = 0;
+    UseB2Protocol = 1;
+    SendCTRLZ = 0;
+    FWDPersonalsOnly = 0;
+    FWDNewImmediately = 0;
+    FwdInterval = 120;
+    RevFWDInterval = 60;
+    MaxFBBBlock = 10000;
+    ConTimeout = 120;
+    BBSHA = "";
+  };
+  K2VTT : 
+  {
+    TOCalls = "";
+    ConnectScript = "";
+    ATCalls = "";
+    HRoutes = "";
+    HRoutesP = "";
+    FWDTimes = "";
+    Enabled = 0;
+    RequestReverse = 0;
+    AllowBlocked = 1;
+    AllowCompressed = 1;
+    UseB1Protocol = 0;
+    UseB2Protocol = 1;
+    SendCTRLZ = 0;
+    FWDPersonalsOnly = 0;
+    FWDNewImmediately = 0;
+    FwdInterval = 3600;
+    RevFWDInterval = 0;
+    MaxFBBBlock = 10000;
+    ConTimeout = 120;
+    BBSHA = "";
+  };
 };
-UIPort1 :
+Housekeeping : 
 {
-  Enabled = 0;
-  SendMF = 0;
-  SendHDDR = 0;
-  SendNull = 0;
+  LastHouseKeepingTime = 1791137421L;
+  LastTrafficTime = 1791137431L;
+  MaxMsgno = 60000;
+  BidLifetime = 60;
+  MaxAge = 30;
+  LogLifetime = 7;
+  MaintInterval = 24;
+  UserLifetime = 0;
+  MaintTime = 0;
+  PR = 0.0;
+  PUR = 0.0;
+  PF = 0.0;
+  PNF = 0.0;
+  BF = 30;
+  BNF = 30;
+  NTSD = 30;
+  NTSF = 30;
+  NTSU = 30;
+  DeletetoRecycleBin = 0;
+  SuppressMaintEmail = 0;
+  MaintSaveReg = 0;
+  OverrideUnsent = 0;
+  SendNonDeliveryMsgs = 1;
+  GenerateTrafficReport = 1;
+  LTFROM = "";
+  LTTO = "";
+  LTAT = "";
 };
-UIPort2 :
+UIPort1 : 
 {
-  Enabled = 0;
-  SendMF = 0;
-  SendHDDR = 0;
-  SendNull = 0;
+  Enabled = 0;
+  SendMF = 0;
+  SendHDDR = 0;
+  SendNull = 0;
 };
-BBSUsers :
+UIPort2 : 
 {
-  KD2KUB = "^^^^************^^************^0^24^0^1^1^0^0^,,,,,,,8,,,,,,,,,,,,,,,,,,^,,,,,,,,,,,,,,,,,,,,,,,,,";
-  K2VTT = "John^^^^^^^0^65536^0^1^1^0^1790712859^4,,,4,,,,1,,,,,,,,,,,,32,,,,14,,^,,,,,,,,,,,,,,,,,,,,,,,,,";
+  Enabled = 0;
+  SendMF = 0;
+  SendHDDR = 0;
+  SendNull = 0;
 };
+BBSUsers : 
+{
+  KD2KUB = "KD2KUB^^KD2KUB.#WNY.NY.USA.NOAM^^^^Aj03252015*^0^24^0^1^1^0^1791156427^13,,,,,,,8,1,,,,,,,,,,,,,,,,,^,,,,,,,8,,,,,,,,,,,,,,,,,,";
+  RMS = "^^^^^^^0^16^0^2^1^0^0^,22,,,,,,6,,,,,,,,,,,,,,,,1168,,^,,,,,,,,,,,,,,,,,,,,,,,,,";
+  K2VTT = "K2VTT^^^^^^^21^65536^0^160^1^0^1791156539^12,,,,,,,,1,,,,,,,,,,,,,,,,15,^,,,,,,,,,,,,,,,,,,,,,,,,,";
+};
+
 
 ```
 Now, with vara, install that to run it as wine and then use this script to set up a service to start up vara and linbpq
